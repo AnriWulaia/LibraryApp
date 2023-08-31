@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Controllers
 {
-    [Route("[controller]")]
+    [Route("/book")]
     [ApiController]
     public class BooksController : Controller
     {

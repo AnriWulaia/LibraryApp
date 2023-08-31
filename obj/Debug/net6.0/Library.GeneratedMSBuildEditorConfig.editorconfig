@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\unity files\Library\Library
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/unity files/Library/Library/Components/AddBook.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZGRCb29rLnJhem9y
+[C:/unity files/Library/Library/Pages/CreateBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/unity files/Library/Library/Pages/Error.cshtml]

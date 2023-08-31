@@ -37,7 +37,7 @@
                         
                     </ul>
                     <div class="container button-navbar">
-                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target=".modal">@(currentPath == "/" ? "Add a new book" : "Create a new user")</button>
+                        <a type="button" class="btn btn-warning" asp-page="CreateBook">@(currentPath == "/" ? "Add a new book" : "Create a new user")</a>
                     </div>
 
                 </div>

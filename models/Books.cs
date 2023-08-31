@@ -2,12 +2,12 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Web.Mvc;
 
 namespace Library.models
 {
     public class Books
     {
-        public String? Isbn { get; set; }
 
         [BindProperty]
         [Required(ErrorMessage = "Title is required.")]

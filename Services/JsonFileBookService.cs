@@ -26,25 +26,27 @@ namespace Library.Services
             return JsonSerializer.Deserialize<Books[]>(jsonFileReader.ReadToEnd(),
                 new JsonSerializerOptions
                 {
-                    PropertyNameCaseInsensitive = true
+                    PropertyNameCaseInsensitive = true,
                 });
 
         }
 
 
 
-        //public bool AddBook(string title, string author, string image, string description, out string errorMessage)
-        //{
-        //    if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(author) ||
-        //        string.IsNullOrWhiteSpace(image) || string.IsNullOrWhiteSpace(description))
-        //    {
-        //        errorMessage = "All fields are required.";
-        //        return false;
-        //    }
+        public void AddBook(Books newBook)
+        {
+            string jsonContent = File.ReadAllText(JsonFileName);
+            List<Books> books = JsonSerializer.Deserialize<List<Books>>(jsonContent);
 
-        //    errorMessage = null;
-        //    // Perform further processing here (e.g., adding the book to the database)
-        //    return true;
-        //}
+            books.Add(newBook);
+
+            string updatedJsonContent = JsonSerializer.Serialize(books, new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                
+            });
+
+            File.WriteAllText(JsonFileName, updatedJsonContent);
+        }
     }
 }
