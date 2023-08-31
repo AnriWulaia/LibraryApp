@@ -1,0 +1,30 @@
+[
+  {
+    "Isbn": "9789941478185",
+    "Title": "Vefxistyaosani",
+    "Author": "Shota Rustaveli",
+    "image": "https://booksale.ge/uploads/books/1534937122.jpg",
+    "Description": "A definitive work of the Georgian Golden Age, the poem consists of over 1600 Rustavelian Quatrains and is considered to be a masterpiece of the Georgian literature."
+  },
+  {
+    "Isbn": "9780520201798",
+    "Title": "Frankenstein",
+    "Author": "Mary Shelley",
+    "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTWOvWV-UtYvY2Qu57SAEGFDMsvxmxU3JjUgPh2_6GgS_6rGUyU",
+    "Description": "Frankenstein tells the story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment."
+  },
+  {
+    "Isbn": "9780451524935",
+    "Title": "1984",
+    "Author": "George Orwell",
+    "image": "https://m.media-amazon.com/images/I/81StSOpmkjL._AC_UF1000,1000_QL80_.jpg",
+    "Description": "1984 is a dystopian novel set in a totalitarian society. It follows the life of Winston Smith as he navigates a world dominated by government surveillance and manipulation."
+  },
+  {
+    "Isbn": "9780061120084",
+    "Title": "To Kill a Mockingbird",
+    "Author": "Harper Lee",
+    "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2qkJLjkVrYGC7JvdfFVZQU-LIVBDggNsIHxmb8SOjLV3HsVnu",
+    "Description": "This novel explores issues of race, class, and morality through the eyes of a young girl named Scout Finch. Her father, Atticus Finch, defends a black man accused of raping a white woman in a racially charged courtroom drama."
+  }
+]
