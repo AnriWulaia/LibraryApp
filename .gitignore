@@ -1,0 +1,80 @@
+# ASP.NET
+
+# .NET artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.sln.docstates
+
+# NuGet
+packages/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directory
+.vscode/
+
+# Visual Studio files
+*.sln
+*.vspscc
+*.vssscc
+.vspscc
+.vssscc
+
+# Rider files
+.idea/
+*.sln.iml
+*.ipr
+*.iws
+*.DS_Store
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider settings folder
+.idea/
+
+# User-specific files
+*.suo
+
+# Logs
+log/
+logs/
+
+# Node.js
+node_modules/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# .NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio Webpack
+webpack.config.js
+webpack.config.vendor.js
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Local files
+*.local
