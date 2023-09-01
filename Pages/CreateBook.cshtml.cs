@@ -26,9 +26,12 @@ namespace Library.Pages
         {
             if (ModelState.IsValid)
             {
-                if (IsImageUrlValid(Book.Image))
+                if (IsImageUrl(Book.Image))
                 {
                     _bookService.AddBook(Book);
+
+                    string success = "";
+                    Response.Cookies.Append("success", "Item added successfully");
 
                     return RedirectToPage("Index");
                 }
@@ -42,20 +45,22 @@ namespace Library.Pages
             return Page();
         }
 
-        private bool IsImageUrlValid(string imageUrl)
+        private bool IsImageUrl(string url)
         {
-            try
+            if (Uri.TryCreate(url, UriKind.Absolute, out Uri uri) && (uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps))
             {
-                using (var client = new HttpClient())
-                {
-                    var response = client.GetAsync(imageUrl).Result;
-                    return response.StatusCode == HttpStatusCode.OK;
-                }
+                return IsImageExtension(uri.AbsolutePath);
             }
-            catch (Exception)
-            {
-                return false;
-            }
+
+            return false;
+        }
+
+        private bool IsImageExtension(string filePath)
+        {
+            string[] imageExtensions = { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+
+            string fileExtension = Path.GetExtension(filePath).ToLower();
+            return Array.Exists(imageExtensions, ext => ext == fileExtension);
         }
     }
 }
