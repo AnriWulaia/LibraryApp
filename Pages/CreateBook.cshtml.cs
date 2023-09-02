@@ -29,7 +29,7 @@ namespace Library.Pages
                 if (IsImageUrl(Book.Image))
                 {
                     _bookService.AddBook(Book);
-
+                    TempData["SuccessMessage"] = "Item added successfully";
                     string success = "";
                     Response.Cookies.Append("success", "Item added successfully");
 

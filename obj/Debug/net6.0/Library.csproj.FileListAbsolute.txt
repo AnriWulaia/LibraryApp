@@ -37,3 +37,7 @@ C:\unity files\Library\Library\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
 C:\unity files\Library\Library\bin\Debug\net6.0\System.Web.WebPages.dll
 C:\unity files\Library\Library\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
 C:\unity files\Library\Library\obj\Debug\net6.0\Library.csproj.CopyComplete
+C:\unity files\Library\Library\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\unity files\Library\Library\bin\Debug\net6.0\Zaabee.Extensions.dll
+C:\unity files\Library\Library\bin\Debug\net6.0\Zaabee.NewtonsoftJson.dll
+C:\unity files\Library\Library\bin\Debug\net6.0\Zaabee.Serializer.Abstractions.dll

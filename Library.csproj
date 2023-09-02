@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
+    <PackageReference Include="Zaabee.NewtonsoftJson" Version="2023.4.3" />
   </ItemGroup>
 
 </Project>

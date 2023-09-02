@@ -34,5 +34,23 @@
     "Author": "Jane Austen",
     "Image": "https://almabooks.com/wp-content/uploads/2016/10/9781847493699.jpg",
     "Description": "Pride and Prejudice is an 1813 novel of manners by Jane Austen. The novel follows the character development of Elizabeth Bennet, the protagonist of the book, who learns about the repercussions of hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness."
+  },
+  {
+    "Title": "Don Quixote",
+    "Author": "Miguel de Cervantes",
+    "Image": "https://m.media-amazon.com/images/M/MV5BNDBlOTY3YzMtNzU5ZS00MDk0LThjYmEtYTcyZDg4YmEwYzFjXkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_FMjpg_UX1000_.jpg",
+    "Description": "Don Quixote is a Spanish epic novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615. Considered a founding work of Western literature, it is often labelled as the first modern novel and one of the greatest works ever written."
+  },
+  {
+    "Title": "Anna Karenina",
+    "Author": "Leo Tolstoy",
+    "Image": "https://www.readandcobooks.co.uk/wp-content/uploads/anna-karenina-tolstoy-9781528718196-cover.jpg",
+    "Description": "Anna Karenina is a novel by the Russian author Leo Tolstoy, first published in book form in 1878. Considered to be one of the greatest works of literature ever written, Tolstoy himself called it his first true novel."
+  },
+  {
+    "Title": "The 48 Laws of Power",
+    "Author": "Robert Greene",
+    "Image": "https://m.media-amazon.com/images/I/71aG\u002BxDKSYL._AC_UF1000,1000_QL80_.jpg",
+    "Description": "The 48 Laws of Power is a non-fiction book by American author Robert Greene. The book is a New York Times bestseller, selling over 1.2 million copies in the United States."
   }
 ]

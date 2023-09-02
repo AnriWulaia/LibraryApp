@@ -75,6 +75,51 @@
         "runtime": {
           "lib/net40/Microsoft.Web.Infrastructure.dll": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Zaabee.Extensions/2023.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Zaabee.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Zaabee.Extensions.dll": {}
+        }
+      },
+      "Zaabee.NewtonsoftJson/2023.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Zaabee.Extensions": "2023.2.0",
+          "Zaabee.Serializer.Abstractions": "2023.3.0"
+        },
+        "compile": {
+          "lib/net6.0/Zaabee.NewtonsoftJson.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Zaabee.NewtonsoftJson.dll": {}
+        }
+      },
+      "Zaabee.Serializer.Abstractions/2023.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Zaabee.Serializer.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Zaabee.Serializer.Abstractions.dll": {}
+        }
       }
     }
   },
@@ -145,11 +190,87 @@
         "microsoft.web.infrastructure.1.0.0.nupkg.sha512",
         "microsoft.web.infrastructure.nuspec"
       ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Zaabee.Extensions/2023.2.0": {
+      "sha512": "DUvCiKrnkMiWoU5Thb0seU7MkqDQd0E8Xe8DfkzCX3KDzukiMkWd0dhiKUKixyq1L5pV8giFh+BuzZ5Wr5NlhQ==",
+      "type": "package",
+      "path": "zaabee.extensions/2023.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Zaabee.Extensions.dll",
+        "lib/net7.0/Zaabee.Extensions.dll",
+        "lib/net8.0/Zaabee.Extensions.dll",
+        "lib/netstandard2.0/Zaabee.Extensions.dll",
+        "zaabee.extensions.2023.2.0.nupkg.sha512",
+        "zaabee.extensions.nuspec"
+      ]
+    },
+    "Zaabee.NewtonsoftJson/2023.4.3": {
+      "sha512": "98qnTUjOId4wrbuAWZxEBS4cQy2Os9tbDr9mM6tUj2VQt1OrIgyikRhaEw7j/Wfh6pL/IXNH5lHLCpBu/TOWjw==",
+      "type": "package",
+      "path": "zaabee.newtonsoftjson/2023.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Zaabee.NewtonsoftJson.dll",
+        "lib/net7.0/Zaabee.NewtonsoftJson.dll",
+        "lib/net8.0/Zaabee.NewtonsoftJson.dll",
+        "lib/netstandard2.0/Zaabee.NewtonsoftJson.dll",
+        "zaabee.newtonsoftjson.2023.4.3.nupkg.sha512",
+        "zaabee.newtonsoftjson.nuspec"
+      ]
+    },
+    "Zaabee.Serializer.Abstractions/2023.3.0": {
+      "sha512": "jdNfW1Lg+xT3SHExaXnSepdbpue2I2LRnNPDlljOlDEPMFLnISCbuw/qne27LFj01f5oTvywm8J4Tg5cQ+9N0A==",
+      "type": "package",
+      "path": "zaabee.serializer.abstractions/2023.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Zaabee.Serializer.Abstractions.dll",
+        "lib/net7.0/Zaabee.Serializer.Abstractions.dll",
+        "lib/net8.0/Zaabee.Serializer.Abstractions.dll",
+        "lib/netstandard2.0/Zaabee.Serializer.Abstractions.dll",
+        "zaabee.serializer.abstractions.2023.3.0.nupkg.sha512",
+        "zaabee.serializer.abstractions.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.AspNet.Mvc >= 5.2.9"
+      "Microsoft.AspNet.Mvc >= 5.2.9",
+      "Zaabee.NewtonsoftJson >= 2023.4.3"
     ]
   },
   "packageFolders": {
@@ -194,6 +315,10 @@
           "Microsoft.AspNet.Mvc": {
             "target": "Package",
             "version": "[5.2.9, )"
+          },
+          "Zaabee.NewtonsoftJson": {
+            "target": "Package",
+            "version": "[2023.4.3, )"
           }
         },
         "imports": [
