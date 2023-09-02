@@ -1,4 +1,5 @@
 ﻿@{
+    ViewData["SuccessMessage"] = TempData["SuccessMessage"];
     var currentPath = Context.Request.Path.Value;
 }
 <!DOCTYPE html>
@@ -55,11 +56,14 @@
         </main>
     </div>
 
-    <!-- success message -->
-    <div class="alert alert-success justify-content-center w-50" id="success" style="margin-left:25%; position:fixed; bottom:0px; z-index:1" role="alert">
-        A new book was added successfully!
-    </div>
 
+    <!-- success message -->
+    @if (ViewData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success justify-content-center w-50" id="success" style="margin-left:25%; position:fixed; bottom:0px; z-index:1" role="alert">
+            A new book was added successfully!
+        </div>
+    }
 
     <footer class="border-top footer text-muted">
         <div class="container">

@@ -1,16 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Library.models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Library.Services
 {
     public class JsonFileBookService
     {
+
         public JsonFileBookService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
@@ -23,6 +26,7 @@ namespace Library.Services
         public IEnumerable<Books> GetBooks()
         {
             using var jsonFileReader = File.OpenText(JsonFileName);
+
             return JsonSerializer.Deserialize<Books[]>(jsonFileReader.ReadToEnd(),
                 new JsonSerializerOptions
                 {
@@ -37,6 +41,14 @@ namespace Library.Services
         {
             string jsonContent = File.ReadAllText(JsonFileName);
             List<Books> books = JsonSerializer.Deserialize<List<Books>>(jsonContent);
+            foreach (var book in books)
+            {
+
+                newBook.Title = newBook.Title.Trim();
+                newBook.Author = newBook.Author.Trim();
+                newBook.Image = newBook.Image.Trim();
+                newBook.Description = newBook.Description.Trim();
+            }
 
             books.Add(newBook);
 

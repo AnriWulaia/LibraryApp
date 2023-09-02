@@ -12,6 +12,7 @@ namespace Library.Pages
         public JsonFileBookService BooksService;
         public IEnumerable<Books>? Books { get; private set; }
 
+
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileBookService bookService)
         {
@@ -24,6 +25,7 @@ namespace Library.Pages
         {
             Books = BooksService.GetBooks();
         }
+
         public void OnPost()
         {
 
