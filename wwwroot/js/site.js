@@ -1,6 +1,9 @@
 ﻿function returnToDefaultPage() {
     window.location.href = '/'; 
 }
+function returnToUserPage() {
+    window.location.href = "/Users";
+}
 
 document.addEventListener("DOMContentLoaded", function () {
 

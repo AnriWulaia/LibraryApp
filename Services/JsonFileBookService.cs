@@ -41,14 +41,12 @@ namespace Library.Services
         {
             string jsonContent = File.ReadAllText(JsonFileName);
             List<Books> books = JsonSerializer.Deserialize<List<Books>>(jsonContent);
-            foreach (var book in books)
-            {
 
-                newBook.Title = newBook.Title.Trim();
-                newBook.Author = newBook.Author.Trim();
-                newBook.Image = newBook.Image.Trim();
-                newBook.Description = newBook.Description.Trim();
-            }
+            newBook.Title = newBook.Title.Trim();
+            newBook.Author = newBook.Author.Trim();
+            newBook.Image = newBook.Image.Trim();
+            newBook.Description = newBook.Description.Trim();
+            
 
             books.Add(newBook);
 
