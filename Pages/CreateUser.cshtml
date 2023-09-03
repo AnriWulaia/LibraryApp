@@ -1,0 +1,42 @@
+﻿@page
+@model Library.Pages.CreateUserModel
+@{
+}
+
+<form method="post" class="w-100">
+    <div class="form-group">
+        <label asp-for="@Model.User.Name">User Name</label>
+        <input type="text" class="form-control" asp-for="@Model.User.Name">
+        <span asp-validation-for="@Model.User.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.User.Number">Number</label>
+        <input type="text" class="form-control" asp-for="@Model.User.Number" placeholder="555-555-555">
+        <span asp-validation-for="@Model.User.Number" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-3 ">
+        <h3>Choose borrowed books</h3>
+        @foreach (var title in Model.Books.OrderBy(book => book.Title)) 
+        {
+            <div class="form-check pb-1">
+                <input class="form-check-input" type="checkbox" value="@title.Title" id="flexCheckDefault">
+                <label class="form-check-label font-monospace" for="flexCheckDefault">
+                    @title.Title
+                </label>
+            </div>
+        }
+    </div>
+
+
+    <button type="button" class="btn btn-secondary mt-3" onclick="returnToUserPage()">Cancel</button>
+    <button type="submit" class="btn btn-primary mt-3">Add User</button>
+</form>
+
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

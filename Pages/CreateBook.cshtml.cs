@@ -18,9 +18,6 @@ namespace Library.Pages
         {
             _bookService = bookService;
         }
-        public void OnGet()
-        {
-        }
 
         public async Task<IActionResult> OnPost()
         {

@@ -1,32 +1,27 @@
 ﻿[
   {
-    "Name": "Anri",
-    "Surname": "Tsulaia",
+    "Name": "Anri Tsulaia",
     "Number": "555-111-333",
-    "Borrowed": [ "Vefxistyaosani" ]
+    "Borrowed": [ "Vefxistyaosani", "1984", "To Kill a Mockingbird" ]
   },
   {
-    "Name": "Elon",
-    "Surname": "Musk",
+    "Name": "Elon Musk",
     "Number": "558-222-444",
     "Borrowed": [ "1984" ]
   },
   {
-    "Name": "Elon",
-    "Surname": "Musk",
-    "Number": "558-222-444",
+    "Name": "Bill Gates",
+    "Number": "558-123-456",
     "Borrowed": [ "1984" ]
   },
   {
-    "Name": "Elon",
-    "Surname": "Musk",
-    "Number": "558-222-444",
+    "Name": "Mark Zuckerburg",
+    "Number": "558-333-111",
     "Borrowed": [ "1984" ]
   },
   {
-    "Name": "Elon",
-    "Surname": "Musk",
-    "Number": "558-222-444",
+    "Name": "Larry Page",
+    "Number": "558-122-357",
     "Borrowed": [ "1984" ]
   }
 ]

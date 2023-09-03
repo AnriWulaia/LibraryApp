@@ -20,8 +20,34 @@ namespace Library.Services
         {
             using StreamReader reader = new(JsonFileName);
             var json = reader.ReadToEnd();
-            List<Users> users = JsonConvert.DeserializeObject<List<Users>>(json);
-            return users;
+            if (!string.IsNullOrEmpty(json))
+            {
+                List<Users> users = JsonConvert.DeserializeObject<List<Users>>(json);
+                return users;
+            }
+            return new List<Users>();
+        }
+        public void AddUser(Users newUser)
+        {
+            string jsonContent = File.ReadAllText(JsonFileName);
+            List<Users> users = JsonConvert.DeserializeObject<List<Users>>(jsonContent);
+
+            newUser.Name = newUser.Name.Trim();
+            newUser.Number = newUser.Number.Trim();
+            if (newUser.Borrowed != null)
+            {
+                for (int i = 0; i < newUser.Borrowed.Count; i++)
+                {
+                    newUser.Borrowed[i] = newUser.Borrowed[i].Trim();
+                }
+            }
+
+
+            users.Add(newUser);
+
+            string updatedJsonContent = JsonConvert.SerializeObject(users);
+
+            File.WriteAllText(JsonFileName, updatedJsonContent);
         }
     }
 
