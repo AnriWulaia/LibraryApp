@@ -2,6 +2,8 @@
 using System.Text.Json;
 using Library.models;
 using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Library.Services
 {
@@ -27,25 +29,22 @@ namespace Library.Services
             }
             return new List<Users>();
         }
+
+
         public void AddUser(Users newUser)
         {
-            string jsonContent = File.ReadAllText(JsonFileName);
-            List<Users> users = JsonConvert.DeserializeObject<List<Users>>(jsonContent);
-
+            List<Users> users = GetUsers();
             newUser.Name = newUser.Name.Trim();
             newUser.Number = newUser.Number.Trim();
-            if (newUser.Borrowed != null)
-            {
-                for (int i = 0; i < newUser.Borrowed.Count; i++)
-                {
-                    newUser.Borrowed[i] = newUser.Borrowed[i].Trim();
-                }
-            }
 
 
             users.Add(newUser);
 
-            string updatedJsonContent = JsonConvert.SerializeObject(users);
+            string updatedJsonContent = JsonSerializer.Serialize(users, new JsonSerializerOptions
+            {
+                WriteIndented = true,
+
+            });
 
             File.WriteAllText(JsonFileName, updatedJsonContent);
         }
