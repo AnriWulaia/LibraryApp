@@ -79,3 +79,18 @@
     background-color: #fff;
     border-top: 0 solid rgba(0,0,0,.125);
 }
+
+
+.delete {
+    position: absolute;
+    right: 10%; 
+    cursor: pointer;
+    color:red;
+    font-size:20px;
+    margin-bottom:10px;
+    line-height:1;
+}
+.book-text{
+    word-wrap:break-word;
+    max-width:90%;
+}

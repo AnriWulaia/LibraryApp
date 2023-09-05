@@ -27,7 +27,6 @@ app.UseAuthorization();
 app.MapBlazorHub();
 app.UseEndpoints(endpoints =>
 {
-
     endpoints.MapControllers();
     endpoints.MapBlazorHub();
     endpoints.MapRazorPages();
