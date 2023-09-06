@@ -1,0 +1,106 @@
+﻿@using Library.models
+@using Library.Services
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Web
+@inject JsonFileUserService userService
+@inject JsonFileBookService bookService;
+@foreach (var user in userService.GetUsers())
+{
+    <div class="col mb-3 mt-5 d-flex">
+        <div class="card flex-fill">
+            <div class="card-body text-center">
+                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" style="width:100px;margin-top:-65px" alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3">
+                <h5 class="card-title">@user.Name</h5>
+                <p class="text-secondary mb-1">@user.Number</p>
+                <hr>
+
+                @if (user.Borrowed != null)
+                {
+                    @foreach (string book in user.Borrowed)
+                    {
+
+                        <div class="container d-flex justify-content-between">
+                            <p class="book-text">@book</p>
+                            <span class="delete">x</span>
+                        </div>
+                    }
+                }
+
+            </div>
+            <div class="card-footer d-flex container justify-content-center">
+                <button class="btn btn-light bg-white has-icon btn-block" type="button" data-bs-toggle="modal" data-bs-target="#myModal" @onclick="(e=>SelectUser(user.Name))"><i class="material-icons">add</i> books</button>
+            </div>
+        </div>
+    </div>
+}
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                @if (selectedUser != null)
+                {
+                    <h5 class="modal-title">Add books to @selectedUser.Name</h5>
+                }
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                @if (selectedUser != null)
+                {
+                    var allBooks = bookService.GetBooks();
+
+                    if (selectedUser.Borrowed != null)
+                    {
+                        foreach (var book in allBooks)
+                        {
+                            if (!selectedUser.Borrowed.Contains(book.Title))
+                            {
+                                <div class="form-check pb-1">
+                                    <input class="form-check-input" type="checkbox" name="Borrowed" value="@book.Title" id="@book.Title">
+                                    <label class="form-check-label font-monospace" for="@book.Title">
+                                        @book.Title
+                                    </label>
+                                </div>
+                            }
+                        }
+                    }
+                    else
+                    {
+
+                        foreach (var book in allBooks)
+                        {
+                            <div class="form-check pb-1">
+                                <input class="form-check-input" type="checkbox" name="Borrowed" value="@book.Title" id="@book.Title">
+                                <label class="form-check-label font-monospace" for="@book.Title">
+                                    @book.Title
+                                </label>
+                            </div>
+                        }
+                    }
+                }
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    public Users selectedUser;
+    public string selectedUserName;
+
+    public void SelectUser(string username)
+    {
+        selectedUserName = username;
+        selectedUser = userService.GetUsers().First(x => x.Name == selectedUserName);
+    }
+
+}

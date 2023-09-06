@@ -1,56 +1,26 @@
 ﻿@page
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Web
 @using Library.Components
+@using Library.Services
+
 @model UserModel
 @{
     ViewData["Title"] = "Users";
 }
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Your Page Title</title>
-    <link href="/css/users.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <div class="container">
-        <div class="main-body">
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm">
-                @foreach (var user in Model.Users)
-                {
-                    <div class="col mb-3 mt-5 d-flex">
+<link href="/css/users.css" rel="stylesheet" type="text/css" />
 
-                        <div class="card flex-fill">
-                            <div class="card-body text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" style="width:100px;margin-top:-65px" alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3">
-                                <h5 class="card-title">@user.Name</h5>
-                                <p class="text-secondary mb-1">@user.Number</p>
-                                <hr>
-                                @if (user.Borrowed != null)
-                                {
-                                    @foreach (string book in user.Borrowed)
-                                    {
-                                        <div class="container d-flex justify-content-between">
-                                            <p class="book-text">@book</p>
-                                            <span class="delete">x</span>
-                                        </div>
-                                    }
-                                }
-
-                            </div>
-                            <div class="card-footer d-flex container justify-content-center">
-                                <button class="btn btn-light bg-white has-icon btn-block" type="button" onclick="openModal()"><i class="material-icons">add</i> books</button>
-
-                            </div>
-                        </div>
-                    </div>
-                }
-                @(await Html.RenderComponentAsync<Modal>(RenderMode.ServerPrerendered))
-            </div>
+<div class="container">
+    <div class="main-body">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm">
+            @(await Html.RenderComponentAsync<UserList>(RenderMode.ServerPrerendered))
         </div>
     </div>
-</body>
-</html>
+</div>
 
+
+<script src="_framework/blazor.server.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var failed = '@TempData["FailedName"]';
@@ -60,12 +30,5 @@
         }
     });
 
-    function openModal() {
-        $('#myModal').modal('show'); 
-    }
-
-    // Function to close the modal
-    function closeModal() {
-        $('#myModal').modal('hide');
-    }
 </script>
+

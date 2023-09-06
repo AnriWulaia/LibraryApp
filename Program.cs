@@ -8,6 +8,7 @@ builder.Services.AddControllers();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddTransient<JsonFileBookService>();
 builder.Services.AddTransient<JsonFileUserService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,15 +23,16 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
-app.MapBlazorHub();
+
+
+
 app.UseEndpoints(endpoints =>
 {
+    endpoints.MapRazorPages();
     endpoints.MapControllers();
     endpoints.MapBlazorHub();
-    endpoints.MapRazorPages();
 });
-app.MapRazorPages();
+
 
 app.Run();

@@ -1,24 +1,9 @@
-html {
-  font-size: 14px;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-
-}
-@media (max-width: 576px) 
-{
-    .button-navbar {
-        justify-content: flex-start !important;
-        max-width:100% !important;
-        padding-left:0px !important;
-    }
-}
 html {
-  position: relative;
-  min-height: 100%;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -34,12 +19,45 @@ body {
     color: black;
 }
 
+nav ul li {
+    font-family: "Montserrat", sans-serif;
+    border-radius: 50px;
+    padding: 0px 7px 0px 7px;
+    margin-left: 10px;
+    background-color: rgba(0,136,169,1);
+    line-height: 1;
+    margin-top: 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 100;
+}
+
+nav ul li a:hover {
+    font-weight:700;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+nav ul li .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
 .navbar .container .navbar-brand {
     font-family: 'Permanent Marker', cursive;
-    font-size: 30px;
+    font-size: 35px;
+    line-height: 1;
 }
+
 .navbar a {
-    font-size:18px;
+    font-size: 16px;
 }
 
 .containerBody {
@@ -52,10 +70,11 @@ body {
     border: 1px solid #babbae;
     z-index: 1;
     position: relative;
-    background-color:white;
+    background-color: white;
 }
+
 .button-navbar {
-    display: flex; 
+    display: flex;
     justify-content: flex-end;
     max-width: 70%;
 }
@@ -250,3 +269,43 @@ body {
 }
 
 /*css egend form user page*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*medias*/
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .button-navbar {
+        justify-content: flex-start;
+        max-width: 100%;
+        padding-left: 0px;
+    }
+
+    nav ul li {
+        margin-left: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        padding: 0px;
+    }
+
+    nav ul li a {
+        color: black !important;
+    }
+}
