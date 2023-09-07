@@ -82,13 +82,12 @@
 
 
 .delete {
-    position: absolute;
-    right: 10%; 
-    cursor: pointer;
+    border:none;
+    background:transparent;
+    padding:0px;
+    margin-top:-22px;
+    font-size:22px;
     color:red;
-    font-size:20px;
-    margin-bottom:10px;
-    line-height:1;
 }
 .book-text{
     word-wrap:break-word;

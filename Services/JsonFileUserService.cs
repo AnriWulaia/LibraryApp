@@ -49,9 +49,46 @@ namespace Library.Services
             File.WriteAllText(JsonFileName, updatedJsonContent);
         }
 
+        public void deleteBook(string name, string bookToDelete)
+        {
+            List<Users> users = GetUsers();
+
+            Users user = users.FirstOrDefault(u => u.Name == name);
+
+            if (user != null)
+            {
+                if (user.Borrowed != null)
+                {
+                    // Modify the user's data 
+                    user.Borrowed.Remove(bookToDelete);
 
 
+                    string updatedJsonData = JsonSerializer.Serialize(users, new JsonSerializerOptions
+                    {
+                        WriteIndented = true,
+
+                    });
+
+                    File.WriteAllText(JsonFileName, updatedJsonData);
+                }
+            }
+        }
+        public void addBooks(string name, List<string> bookList)
+        {
+            List<Users> users = GetUsers();
+            Users user = users.FirstOrDefault(u => u.Name == name);
+            if(user != null)
+            {
+                user.Borrowed.AddRange(bookList);
+
+                string updatedJsonData = JsonSerializer.Serialize(users, new JsonSerializerOptions
+                {
+                    WriteIndented = true,
+
+                });
+
+                File.WriteAllText(JsonFileName, updatedJsonData);
+            }
+        }
     }
-
-
 }

@@ -3,7 +3,7 @@
 @{
 }
 
-<form class="form" method="post" class="w-100" asp-page-handler="ProcessForm">
+<form class="form w-100" method="post" asp-page-handler="ProcessForm">
     <div class="form-group">
         <label asp-for="@Model.User.Name">User Name</label>
         <input type="text" class="form-control" id="Name" asp-for="@Model.User.Name">
@@ -15,6 +15,7 @@
         <input type="text" class="form-control" asp-for="@Model.User.Number" id="Number" placeholder="555-555-555">
         <span asp-validation-for="@Model.User.Number" class="text-danger"></span>
     </div>
+
     <div class="form-group mt-3 ">
         <h3>Choose borrowed books</h3>
         @foreach (var title in Model.Books.OrderBy(book => book.Title)) 
