@@ -78,3 +78,5 @@ webpack.config.vendor.js
 
 # Local files
 *.local
+/Properties/PublishProfiles
+/.config
