@@ -78,8 +78,16 @@ namespace Library.Services
             List<Users> users = GetUsers();
             Users user = users.FirstOrDefault(u => u.Name == name);
             if(user != null)
-            {
-                user.Borrowed.AddRange(bookList);
+            { 
+                if(user.Borrowed != null)
+                {
+                    user.Borrowed.AddRange(bookList);
+                }
+                else
+                {
+                    user.Borrowed = bookList;
+                }
+                
 
                 string updatedJsonData = JsonSerializer.Serialize(users, new JsonSerializerOptions
                 {

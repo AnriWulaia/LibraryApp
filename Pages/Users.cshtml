@@ -18,69 +18,15 @@
         </div>
     </div>
 </div>
+@if (TempData["FailedName"] != null)
+{
+    <script type="text/javascript">
+        setTimeout(function() {
+            var message = '@TempData["FailedName"]';
+            alert(message);
+        }, 500); 
+    </script>
+}
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var failed = '@TempData["FailedName"]';
-
-        if (failed) {
-            alert(failed);
-        }
-
-        setTimeout(() => {
-            document.querySelectorAll('.delete').forEach(function (deleteButton) {
-                deleteButton.addEventListener('click', function () {
-
-                    var userName = this.getAttribute('data-user-name');
-                    var bookToDelete = this.getAttribute('data-book');
-                    console.log(userName, bookToDelete);
-                    // Send an AJAX request to delete the book
-                    $.ajax({
-                        type: 'POST',
-                        url: '/Users/DeleteBook', 
-                        data: { userName: userName, bookToDelete: bookToDelete },
-                        success: function (response) {
-
-                            console.log("Success: " + response);
-
-                            // remove the book element from the UI
-                            var bookItem = document.querySelector('.book-item[data-user-name="' + userName + '"]');
-
-                            if (bookItem) {
-                                bookItem.remove();
-                            }
-                        },
-                        error: function (error) {
-                            console.log(error);
-                            console.error("Error: " + error.responseText);
-                        }
-                    });
-                });
-            });
-        }, 500);
-
-    });
-
-    function getSelectedBooks() {
-        // Get all checkboxes with the name "book"
-        var userName = document.querySelector(".form-check-label").getAttribute("for");
-        var checkboxes = document.querySelectorAll('input[name="Borrowed"]');
-
-        // Initialize an array to store the selected books
-        var selectedBooks = [];
-
-        // Loop through the checkboxes and check if they are checked
-        checkboxes.forEach(function (checkbox) {
-            if (checkbox.checked) {
-                selectedBooks.push(checkbox.value); // Add the value to the selectedBooks array
-            }
-        });
-
-        // Display the selected books in the console
-        console.log("Selected Books: " + selectedBooks.join(', '));
-    }
-
-
-</script>
 <script src="_framework/blazor.server.js"></script>
 

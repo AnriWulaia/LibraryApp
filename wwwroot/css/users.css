@@ -92,4 +92,9 @@
 .book-text{
     word-wrap:break-word;
     max-width:90%;
+    text-align:left;
+}
+
+.hidden{
+    display:none !important;
 }

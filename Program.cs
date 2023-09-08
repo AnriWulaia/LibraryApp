@@ -35,6 +35,10 @@ app.UseEndpoints(endpoints =>
         name: "customRoute",
         pattern: "Users/DeleteBook",
         defaults: new { controller = "User", action = "DeleteBook" });
+    endpoints.MapControllerRoute(
+        name: "customRoute",
+        pattern: "Users/addBooks",
+        defaults: new { controller = "User", action = "addBooks" });
     endpoints.MapRazorPages();
     endpoints.MapControllers();
     endpoints.MapBlazorHub();

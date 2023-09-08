@@ -20,9 +20,9 @@
                     @foreach (string book in user.Borrowed)
                     {
 
-                        <div class="container d-flex justify-content-between book-item" data-user-name="@user.Name">
+                        <div class="container d-flex justify-content-between book-item" data-user-name="@user.Name" data-book="@book">
                             <p class="book-text">@book</p>
-                            <button class="delete" data-user-name="@user.Name" data-book="@book" id="delete">x</button>
+                            <button class="delete" data-user-name="@user.Name" data-book="@book" id="delete" onclick="deleteBook(this)">x</button>
                         </div>
                     }
                 }
@@ -41,9 +41,9 @@
             <div class="modal-header">
                 @if (selectedUser != null)
                 {
-                    <h5 class="modal-title">Add books to @selectedUser.Name</h5>
+                    <h5 class="modal-title">Add books to <span id="userName">@selectedUser.Name</span></h5>
                 }
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -62,7 +62,7 @@
                                 {
                                     <div class="form-check pb-1">
                                         <input class="form-check-input" type="checkbox" name="Borrowed" value="@book.Title" id="@book.Title" >
-                                        <label class="form-check-label font-monospace" for="@book.Title">
+                                        <label class="form-check-label font-monospace" for="Borrowed">
                                             @book.Title
                                         </label>
                                     </div>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" id="submitButton" onclick="getSelectedBooks()">Save changes</button>
+                <button type="submit" class="btn btn-primary" id="submitButton" data-bs-dismiss="modal" onclick="addBooks()" >Save changes</button>
                 </div>
         </div>
     </div>
@@ -103,8 +103,8 @@
 
     public void SelectUser(string username)
     {
+
         selectedUserName = username;
         selectedUser = userService.GetUsers().First(x => x.Name == selectedUserName);
     }
-
 }
