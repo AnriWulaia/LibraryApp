@@ -58,5 +58,17 @@
     "Author": "J. K. Rowling.",
     "Image": "https://m.media-amazon.com/images/I/81m1s4wIPML._AC_UF1000,1000_QL80_.jpg",
     "Description": "Harry Potter and the Philosopher\u0027s Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling\u0027s debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry."
+  },
+  {
+    "Title": "Pinocchio",
+    "Author": "Carlo Collodi",
+    "Image": "https://sterling-us.imgix.net/covers/9781402745812.jpg?auto=format\u0026h=648",
+    "Description": "Pinocchio is known for having a short nose that becomes longer when he is under stress (chapter 3), especially while lying. In the original tale, Collodi describes him as a \u0022rascal,\u0022 \u0022imp,\u0022 \u0022scapegrace\u0022 (mischievous or wayward person), \u0022disgrace,\u0022 \u0022ragamuffin,\u0022 and \u0022confirmed rogue,\u0022 with even his father, carpenter Geppetto, referring to him as a \u0022wretched boy.\u0022 Upon being born, Pinocchio immediately laughs derisively in his creator\u0027s face, whereupon he steals the old man\u0027s wig."
+  },
+  {
+    "Title": "Rich Dad Poor Dad",
+    "Author": "Robert Kiyosaki and Sharon Lechter",
+    "Image": "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF894,1000_QL80_.jpg",
+    "Description": "Rich Dad Poor Dad is a 1997 book written by Robert T. Kiyosaki and Sharon Lechter. It advocates the importance of financial literacy, financial independence and building wealth through investing in assets, real estate investing, starting and owning businesses, as well as increasing one\u0027s financial intelligence."
   }
 ]

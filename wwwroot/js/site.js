@@ -5,19 +5,38 @@ function returnToUserPage() {
     window.location.href = "/Users";
 }
 
+
+var successMessageDiv = document.getElementById("success");
+
+if (successMessageDiv) {
+    setTimeout(function () {
+        successMessageDiv.style.display = "none";
+    }, 3000);
+}
+
+
+/*Users javascript*/
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    var successMessageDiv = document.getElementById("success");
+    var buttons = document.querySelectorAll("#myModalBtn");
 
-    if (successMessageDiv) {
+
+    if (buttons.length > 0) {
+
+        buttons.forEach(function (button) {
+            button.disabled = true;
+        });
+
         setTimeout(function () {
-            successMessageDiv.style.display = "none";
-        }, 3000);
+            buttons.forEach(function (button) {
+                button.disabled = false;
+            });
+        }, 1000);
     }
 });
 
 
-/*Users javascript*/
 async function deleteBook(button) {
     var userName = button.getAttribute('data-user-name');
     var bookToDelete = button.getAttribute('data-book');

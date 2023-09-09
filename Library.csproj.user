@@ -5,6 +5,6 @@
     <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
     <RazorPage_SelectedScaffolderID>RazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>C:\unity files\Library\Library\Properties\PublishProfiles\wulo165-001-site1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\unity files\Library\Library\Properties\PublishProfiles\wulo165-001-site1 - FTP.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

@@ -3,15 +3,21 @@
     "Name": "Anri Tsulaia",
     "Number": "555-111-333",
     "Borrowed": [
+      "Anna Karenina",
+      "The Great Gatsby",
       "Pride and Prejudice",
-      "Anna Karenina"
+      "Don Quixote",
+      "1984",
+      "To Kill a Mockingbird",
+      "The 48 Laws of Power"
     ]
   },
   {
     "Name": "Elon Musk",
     "Number": "558-222-444",
     "Borrowed": [
-      "Anna Karenina"
+      "To Kill a Mockingbird",
+      "Frankenstein"
     ]
   },
   {
@@ -19,20 +25,30 @@
     "Number": "558-123-456",
     "Borrowed": [
       "The Great Gatsby",
-      "Don Quixote",
-      "Anna Karenina",
-      "The 48 Laws of Power"
+      "Pride and Prejudice",
+      "Don Quixote"
     ]
   },
   {
     "Name": "Mark Zuckerburg",
     "Number": "558-333-111",
-    "Borrowed": []
+    "Borrowed": [
+      "Don Quixote",
+      "Anna Karenina"
+    ]
   },
   {
     "Name": "Larry Page",
     "Number": "558-122-357",
     "Borrowed": [
+      "To Kill a Mockingbird"
+    ]
+  },
+  {
+    "Name": "Barack Obama",
+    "Number": "557-505-505",
+    "Borrowed": [
+      "Anna Karenina",
       "To Kill a Mockingbird"
     ]
   }
